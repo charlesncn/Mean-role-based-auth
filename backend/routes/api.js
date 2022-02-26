@@ -31,7 +31,7 @@ router.post('/register', (req, res) =>{
 
 // login API
 router.post('/login', (req, res) =>{
-    let userData = req.body
+    let userData = req.body //extract 
     User.findOne({email: userData.email}, (error, user) =>{
         if(error){
             console.log(error)
